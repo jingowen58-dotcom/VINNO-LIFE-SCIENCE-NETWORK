@@ -40,7 +40,7 @@ export const en = {
     photoNote: "A public photograph of a companion animal. Not a VINNO study subject, partner, or lifespan result.",
     heroCompanionAlt: "A golden retriever sitting outdoors with a tulip. A photograph of companionship, not a VINNO study.",
     togetherAlt: "Two dogs running toward the camera on a path. A photograph of companionship, not a VINNO study.",
-    careAlt: "A beagle looking toward the camera outdoors. A photograph used to suggest everyday care, not a diagnosis or a product.",
+    careAlt: "A beagle looking toward the camera outdoors, used to suggest everyday care.",
     heroAlt: "An illustrated Earth with a sparse data network and a DNA strand. It is not a map of partners or live data.",
     layersAlt: "Six glowing plates illustrating the planned research stack. The plates are a diagram, not a running system.",
     aiAlt: "A network shaped like a brain. It illustrates a future research aid and shows no model output.",
@@ -120,7 +120,7 @@ export const en = {
         summary: "A product and service path that would start from day-to-day pet health management.",
         points: ["Pet Health Products", "Diagnostics & Testing", "Digital Health Records", "Health Management", "Personalized Solutions"],
         action: "Explore Health",
-        more: "VINNO HEALTH is not operating a store, a testing service, or a health-record product in this release. No catalog, price, or order flow is provided.",
+        more: "Enter through everyday nutrition and health management.",
       },
       healthspan: {
         name: "VINNO HEALTHSPAN RESEARCH",

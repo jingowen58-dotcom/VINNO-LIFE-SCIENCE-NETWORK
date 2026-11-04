@@ -91,10 +91,12 @@ export function HomeRest({ locale }: { locale: Locale }) {
           <p className="mt-6 max-w-3xl text-base leading-7 text-[var(--color-text-secondary)]">{copy.productsBody}</p>
           <div className="mt-8 grid gap-4 md:grid-cols-3">
             {copy.products.map((product) => (
-              <Link key={product.slug} href={`/${locale}/products/${product.slug}/`} className="surface block p-5 hover:border-[var(--color-primary)]">
-                <p className="text-xs tracking-[0.14em] text-[var(--color-secondary)]">{product.stage}</p>
-                <h3 className="mt-3 text-xl text-[var(--color-text-primary)]">{product.name}</h3>
-                <p className="mt-3 text-sm leading-6 text-[var(--color-text-secondary)]">{product.summary}</p>
+              <Link key={product.slug} href={`/${locale}/products/${product.slug}/`} className="surface block overflow-hidden hover:border-[var(--color-primary)]">
+                <Photo src={product.image} alt={product.name} className="aspect-[4/5] w-full object-cover" />
+                <div className="p-5">
+                  <h3 className="text-xl text-[var(--color-text-primary)]">{product.name}</h3>
+                  <p className="mt-3 text-sm leading-6 text-[var(--color-text-secondary)]">{product.summary}</p>
+                </div>
               </Link>
             ))}
           </div>

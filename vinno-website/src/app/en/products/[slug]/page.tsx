@@ -1,5 +1,5 @@
 import { ProductDetailPage } from "@/components/pages/Interior";
-import { productSlugs } from "@/content/v2";
+import { getProduct, productSlugs } from "@/content/v2";
 import { buildMetadata } from "@/lib/seo";
 
 export function generateStaticParams() {
@@ -7,7 +7,10 @@ export function generateStaticParams() {
 }
 
 export function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
-  return params.then(({ slug }) => buildMetadata("en", `/products/${slug}`, "Product direction | VINNO"));
+  return params.then(({ slug }) => {
+    const product = getProduct("en", slug);
+    return buildMetadata("en", `/products/${slug}`, product ? `${product.name} | VINNO` : "Products | VINNO");
+  });
 }
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {

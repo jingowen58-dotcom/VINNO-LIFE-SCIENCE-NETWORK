@@ -2,6 +2,7 @@ import Link from "next/link";
 import { SiteFrame } from "@/components/layout/SiteFrame";
 import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/Button";
+import { Photo } from "@/components/ui/Photo";
 import { StatusBadge } from "@/components/ui/StatusBadge";
 import { HeroVisual } from "@/components/hero/HeroVisual";
 import { ArchitectureSection } from "@/components/sections/ArchitectureSection";
@@ -141,14 +142,15 @@ export function ProductsPage({ locale }: { locale: Locale }) {
       <Container>
         <p className="text-xs tracking-[0.18em] text-[var(--color-secondary)]">{locale === "zh" ? "产品中心" : "Products"}</p>
         <h1 className="mt-4 max-w-3xl text-4xl font-medium tracking-[-0.03em] md:text-5xl">{copy.productsTitle}</h1>
-        <p className="mt-6 max-w-3xl border-l border-[var(--color-secondary)] pl-4 text-sm leading-6 text-[var(--color-text-primary)]">{copy.notForSale}</p>
         <p className="mt-6 max-w-3xl text-base leading-7 text-[var(--color-text-secondary)]">{copy.productsBody}</p>
         <div className="mt-8 grid gap-4 md:grid-cols-3">
           {copy.products.map((product) => (
-            <Link key={product.slug} href={`/${locale}/products/${product.slug}/`} className="surface block p-5 hover:border-[var(--color-primary)]">
-              <p className="text-xs tracking-[0.14em] text-[var(--color-secondary)]">{product.stage}</p>
-              <h2 className="mt-3 text-xl">{product.name}</h2>
-              <p className="mt-3 text-sm leading-6 text-[var(--color-text-secondary)]">{product.summary}</p>
+            <Link key={product.slug} href={`/${locale}/products/${product.slug}/`} className="surface block overflow-hidden hover:border-[var(--color-primary)]">
+              <Photo src={product.image} alt={product.name} className="aspect-[4/5] w-full object-cover" />
+              <div className="p-5">
+                <h2 className="text-xl">{product.name}</h2>
+                <p className="mt-3 text-sm leading-6 text-[var(--color-text-secondary)]">{product.summary}</p>
+              </div>
             </Link>
           ))}
         </div>
@@ -159,44 +161,23 @@ export function ProductsPage({ locale }: { locale: Locale }) {
 
 export function ProductDetailPage({ locale, slug }: { locale: Locale; slug: string }) {
   const product = getProduct(locale, slug);
-  const copy = getV2(locale);
   if (!product || !productSlugs.includes(slug as ProductSlug)) notFound();
-  const rows = [
-    [locale === "zh" ? "产品定位" : "Role", product.intended],
-    [locale === "zh" ? "核心成分" : "Ingredients", product.formula],
-    [locale === "zh" ? "配方逻辑与依据" : "Formula and evidence", product.evidence],
-    [locale === "zh" ? "适用范围" : "Scope", product.scope],
-    [locale === "zh" ? "使用说明" : "How it would be used", product.use],
-    [locale === "zh" ? "安全说明" : "Safety", product.safety],
-  ];
   return (
     <SiteFrame locale={locale} light>
       <Container>
-        <p className="text-xs tracking-[0.18em] text-[var(--color-secondary)]">{product.stage}</p>
-        <h1 className="mt-4 text-4xl font-medium tracking-[-0.03em] md:text-5xl">{product.name}</h1>
-        <p className="mt-6 max-w-3xl border-l border-[var(--color-secondary)] pl-4 text-sm leading-6">{copy.notForSale}</p>
-        <p className="mt-6 max-w-3xl text-base leading-7 text-[var(--color-text-secondary)]">{product.summary}</p>
-        <dl className="mt-8 max-w-3xl space-y-5">
-          {rows.map(([label, value]) => (
-            <div key={label}>
-              <dt className="text-xs tracking-[0.14em] text-[var(--color-primary)]">{label}</dt>
-              <dd className="mt-2 text-sm leading-6 text-[var(--color-text-secondary)]">{value}</dd>
+        <div className="grid items-start gap-8 lg:grid-cols-2 lg:gap-14">
+          <Photo src={product.image} alt={product.name} priority className="aspect-[4/5] w-full rounded-[28px] object-cover" />
+          <div>
+            <p className="text-xs tracking-[0.18em] text-[var(--color-secondary)]">{locale === "zh" ? "产品中心" : "Products"}</p>
+            <h1 className="mt-4 text-4xl font-medium tracking-[-0.03em] md:text-5xl">{product.name}</h1>
+            <p className="mt-6 max-w-xl text-base leading-7 text-[var(--color-text-secondary)]">{product.summary}</p>
+            <p className="mt-6 max-w-xl text-sm leading-6 text-[var(--color-text-secondary)]">{product.safety}</p>
+            <div className="mt-8">
+              <Button href={`/${locale}/products/`} variant="secondary">
+                {locale === "zh" ? "返回产品中心" : "Back to products"}
+              </Button>
             </div>
-          ))}
-        </dl>
-        <h2 className="mt-10 text-2xl">{locale === "zh" ? "常见问题" : "Questions"}</h2>
-        <div className="mt-4 max-w-3xl space-y-4">
-          {product.questions.map((item) => (
-            <article key={item.q}>
-              <h3 className="text-base">{item.q}</h3>
-              <p className="mt-1 text-sm leading-6 text-[var(--color-text-secondary)]">{item.a}</p>
-            </article>
-          ))}
-        </div>
-        <div className="mt-8">
-          <Button href={`/${locale}/products/`} variant="secondary">
-            {locale === "zh" ? "返回产品方向" : "Back to directions"}
-          </Button>
+          </div>
         </div>
       </Container>
     </SiteFrame>
