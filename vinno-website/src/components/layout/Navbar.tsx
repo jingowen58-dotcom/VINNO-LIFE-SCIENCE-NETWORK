@@ -50,7 +50,7 @@ export function Navbar({ locale, content }: { locale: "en" | "zh"; content: Site
   }, [open]);
 
   return (
-    <header className={cn("fixed inset-x-0 top-0 z-40 border-b transition-colors", scrolled || open ? "border-[var(--color-border)] bg-[rgba(7,17,31,0.86)] backdrop-blur-md" : "border-transparent bg-transparent")}>
+    <header className={cn("fixed inset-x-0 top-0 z-40 border-b border-[var(--color-border)] bg-[rgba(247,245,239,0.94)] text-[var(--color-text-primary)] backdrop-blur-md", scrolled && "shadow-[0_8px_24px_rgba(32,44,37,0.06)]")}>
       <div className="mx-auto flex h-28 w-full max-w-[1440px] items-center justify-between px-5 md:px-[5vw]">
         <Link href={`/${locale}/`} aria-label="维诺·恩宠 VINNO · ENCHONG">
           <Logo priority className="h-24" />

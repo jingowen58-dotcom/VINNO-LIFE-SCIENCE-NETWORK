@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteOrigin),
   title: "VINNO | Global Life Science Network",
   description:
-    "VINNO is building an open life science infrastructure connecting standardized biological data, research databases, AI research intelligence and scientific collaboration.",
+    "VINNO is working toward healthier lives and longer companionship, starting from pet healthspan. Public today: a domestic-dog observation draft and a reference validator.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

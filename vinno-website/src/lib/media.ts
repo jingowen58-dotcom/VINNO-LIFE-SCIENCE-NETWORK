@@ -6,6 +6,12 @@ export function asset(path: string) {
   return `${basePath}${path}`;
 }
 
+export const companionPhotos = {
+  hero: "/images/hero-companion.jpg",
+  together: "/images/home-together.jpg",
+  care: "/images/home-care.jpg",
+} as const;
+
 export const visuals = {
   hero: "/images/hero-network.jpg",
   layers: "/images/layer-stack.jpg",

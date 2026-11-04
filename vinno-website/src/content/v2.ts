@@ -83,15 +83,15 @@ type V2Copy = {
 };
 
 const zh: V2Copy = {
-  brandTitle: "我们为什么关注宠物健康寿命？",
+  brandTitle: "从宠物健康寿命开始，探索生命的更多可能。",
   brandBody: [
     "宠物的日常状态、饮食、体重和活动，会随着年龄变化。把这些观察记清楚，是以后讨论健康管理的起点。",
     "VINNO 想把这件事放在可核对的数据标准上。现在公开的基础，是家犬观察草案和参考验证工具。营养产品和长期服务还在准备，不会把一次填写说成科研参与或寿命结果。",
   ],
-  scienceTitle: "以现有标准为基础，而不是以未建成的系统作为承诺",
-  scienceBody: "科研页面保留六层架构、VULS、研究方向和路线图。数据库、AI 引擎和国际合作仍按真实进度标注。",
+  scienceTitle: "让健康观察更有结构。",
+  scienceBody: "科研页面保留六层架构、VULS、研究方向和路线图。转动地球仪放在 VULS 技术页，表示把观察放进同一套结构，不是合作地图或实时数据库。数据库、AI 引擎和国际合作仍按真实进度标注。",
   sciencePoints: ["家犬 VULS 草案", "参考验证工具", "五个研究方向", "公开的建设状态"],
-  healthTitle: "先看清这只宠物的情况，再谈可能的营养方向",
+  healthTitle: "按生命阶段看日常健康，先不承诺结果。",
   healthBody: "健康评估用来整理你提供的信息。它不诊断疾病，不预测还能陪伴多久，也不会在没有在售产品时推荐购买。",
   healthPoints: ["建立一份当时填写的档案", "标出缺失和需要确认的信息", "有症状或正在用药时，先咨询兽医"],
   productsTitle: "三个营养方向，目前都还不能购买",
@@ -209,15 +209,15 @@ const zh: V2Copy = {
 };
 
 const en: V2Copy = {
-  brandTitle: "Why pet healthspan?",
+  brandTitle: "Begin with pet healthspan.",
   brandBody: [
     "Day-to-day condition, diet, weight, and activity change as an animal ages. A clear record is the starting point for any later health discussion.",
     "VINNO wants that record to sit on a checkable data standard. What is public today is a draft for domestic dogs and a reference validator. Nutrition products and ongoing services are still in preparation. Filling in a form is not research participation and not a lifespan result.",
   ],
-  scienceTitle: "The public standard comes first",
-  scienceBody: "The science pages keep the six-layer architecture, VULS, research directions, and roadmap. Databases, the AI engine, and institutional collaboration stay labeled by their real status.",
+  scienceTitle: "Give health observations a structure.",
+  scienceBody: "The science pages keep the six-layer architecture, VULS, research directions, and roadmap. The rotating globe lives on the VULS page: it pictures one structure for observations, not a partner map or a live database. Databases, the AI engine, and institutional collaboration stay labeled by their real status.",
   sciencePoints: ["Canine VULS draft", "Reference validator", "Five research directions", "Public build status"],
-  healthTitle: "Describe the animal before discussing nutrition",
+  healthTitle: "Everyday health, by life stage. No promised outcome.",
   healthBody: "The review organizes information you supply. It does not diagnose disease, estimate remaining years, or recommend a purchase when no product is on sale.",
   healthPoints: ["A profile for this visit only", "Missing items called out", "Symptoms or current medication lead to a veterinarian, not a bundle"],
   productsTitle: "Three nutrition directions. None are for sale.",

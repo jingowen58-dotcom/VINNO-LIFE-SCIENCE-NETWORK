@@ -3,6 +3,7 @@ import { SiteFrame } from "@/components/layout/SiteFrame";
 import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/Button";
 import { StatusBadge } from "@/components/ui/StatusBadge";
+import { HeroVisual } from "@/components/hero/HeroVisual";
 import { ArchitectureSection } from "@/components/sections/ArchitectureSection";
 import { VulsSection } from "@/components/sections/VulsSection";
 import { ResearchDomainsSection } from "@/components/sections/ResearchDomainsSection";
@@ -55,6 +56,24 @@ export function TechnologyPage({ locale }: { locale: Locale }) {
             : "The interactive stack and the VULS explanation stay here. The standard is not a database, and the validator is not a research platform."}
         </p>
       </Container>
+      <section className="theme-dark mt-14" aria-labelledby="vuls-globe">
+        <Container className="py-12 md:py-16">
+          <div className="grid items-center gap-6 lg:grid-cols-[0.85fr_1.15fr]">
+            <div>
+              <p className="text-xs tracking-[0.18em] text-[var(--color-primary)]">VULS</p>
+              <h2 id="vuls-globe" className="mt-4 text-3xl font-medium tracking-[-0.03em] md:text-4xl">
+                {locale === "zh" ? "把分散的观察放进同一套结构。" : "One structure for separate observations."}
+              </h2>
+              <p className="mt-5 text-sm leading-6 text-[var(--color-text-secondary)]">
+                {locale === "zh"
+                  ? "地球仪表示 VINNO 想把观察放进同一套数据标准。它不是合作机构地图，不是实时数据库，也不能转动出寿命结论。"
+                  : "The globe shows the intention to place observations in one data standard. It is not a map of partners, not a live database, and it does not produce a lifespan result."}
+              </p>
+            </div>
+            <HeroVisual label={content.hero.visualLabel} />
+          </div>
+        </Container>
+      </section>
       <ArchitectureSection content={content} />
       <VulsSection content={content} />
     </SiteFrame>

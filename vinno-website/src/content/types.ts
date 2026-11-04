@@ -32,6 +32,10 @@ export type SiteContent = {
   };
   media: {
     note: string;
+    photoNote: string;
+    heroCompanionAlt: string;
+    togetherAlt: string;
+    careAlt: string;
     heroAlt: string;
     layersAlt: string;
     aiAlt: string;

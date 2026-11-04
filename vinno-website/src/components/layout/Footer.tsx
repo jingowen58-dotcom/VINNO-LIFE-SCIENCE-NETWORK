@@ -45,10 +45,10 @@ export function Footer({ locale, content }: { locale: "en" | "zh"; content: Site
         <div>
           <h2 className="text-xs tracking-[0.18em] text-[var(--color-primary)] uppercase">{content.footer.contact}</h2>
           <p className="mt-4 text-sm text-[var(--color-text-primary)]">{content.footer.company}</p>
-          <a className="mt-3 inline-block text-sm text-[var(--color-primary)] underline decoration-[rgba(70,200,232,0.4)] underline-offset-4" href={`mailto:${brand.email}`}>
+          <a className="mt-3 inline-block text-sm text-[var(--color-primary)] underline decoration-[rgba(198,166,107,0.7)] underline-offset-4" href={`mailto:${brand.email}`}>
             {brand.email}
           </a>
-          <a className="mt-4 inline-flex text-sm leading-6 text-[var(--color-text-secondary)] underline decoration-[rgba(70,200,232,0.4)] underline-offset-4" href={brand.repository} rel="noreferrer">
+          <a className="mt-4 inline-flex text-sm leading-6 text-[var(--color-text-secondary)] underline decoration-[rgba(198,166,107,0.7)] underline-offset-4" href={brand.repository} rel="noreferrer">
             {content.footer.repositoryNote}
           </a>
         </div>

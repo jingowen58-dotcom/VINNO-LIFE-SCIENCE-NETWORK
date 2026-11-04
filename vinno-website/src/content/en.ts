@@ -3,9 +3,9 @@ import type { SiteContent } from "./types";
 export const en = {
   locale: "en",
   meta: {
-    title: "VINNO | Global Life Science Network",
+    title: "VINNO | Advancing Life. Extending Healthspan",
     description:
-      "VINNO is building an open life science infrastructure connecting standardized biological data, research databases, AI research intelligence and scientific collaboration.",
+      "VINNO is working toward healthier lives and longer companionship, starting from pet healthspan. Public today: a domestic-dog observation draft and a reference validator. Not a measured lifespan result.",
     ogLocale: "en_US",
   },
   nav: {
@@ -25,19 +25,22 @@ export const en = {
     skip: "Skip to content",
   },
   hero: {
-    eyebrow: "VINNO | GLOBAL LIFE SCIENCE NETWORK",
-    title: "Building the Open Science Network for Life & Health.",
-    subtitle:
-      "Connecting biological data, research intelligence and scientific collaboration to advance our understanding of life and healthspan.",
+    eyebrow: "VINNO · ENCHONG",
+    title: "Advancing Life.\nExtending Healthspan.",
+    subtitle: "Start from everyday companionship. Record what changes, then talk about care — and about research that may last longer.",
     primary: "Explore pet health",
     secondary: "Explore the science",
     today:
-      "What is public today is a draft data standard for domestic dogs and a reference validator. Research databases, the AI engine, and the collaboration network are not in service.",
-    aside: "From Data to Discovery. From Life to Longevity.",
-    visualLabel: "Illustrative data network. Not a live map of partners or data sources.",
+      "“Extending Healthspan” is an aim, not a measured result. What is public today is a draft data standard for domestic dogs and a reference validator. Research databases, the AI engine, and the collaboration network are not in service.",
+    aside: "Canine observation draft · Reference validator",
+    visualLabel: "A rotating globe for the data standard. Not a live map of partners or a database.",
   },
   media: {
     note: "Illustration. Not a study subject, a partner, or a result.",
+    photoNote: "A public photograph of a companion animal. Not a VINNO study subject, partner, or lifespan result.",
+    heroCompanionAlt: "A golden retriever sitting outdoors with a tulip. A photograph of companionship, not a VINNO study.",
+    togetherAlt: "Two dogs running toward the camera on a path. A photograph of companionship, not a VINNO study.",
+    careAlt: "A beagle looking toward the camera outdoors. A photograph used to suggest everyday care, not a diagnosis or a product.",
     heroAlt: "An illustrated Earth with a sparse data network and a DNA strand. It is not a map of partners or live data.",
     layersAlt: "Six glowing plates illustrating the planned research stack. The plates are a diagram, not a running system.",
     aiAlt: "A network shaped like a brain. It illustrates a future research aid and shows no model output.",
