@@ -27,8 +27,8 @@ export function HeroSection({ locale, content }: { locale: "en" | "zh"; content:
             <p className="mt-6 max-w-xl border-l border-[var(--color-primary)] pl-4 text-sm leading-6 text-[var(--color-text-secondary)]">{copy.today}</p>
             <p className="mt-6 font-display text-lg tracking-[-0.03em] text-[var(--color-text-primary)] md:text-xl">{copy.aside}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Button href={`/${locale}/#vision`}>{copy.primary}</Button>
-              <Button href={`/${locale}/#architecture`} variant="secondary">
+              <Button href={`/${locale}/health/`}>{copy.primary}</Button>
+              <Button href={`/${locale}/science/`} variant="secondary">
                 {copy.secondary}
               </Button>
             </div>

@@ -1,44 +1,25 @@
-import { Footer } from "@/components/layout/Footer";
-import { Navbar } from "@/components/layout/Navbar";
-import { AiResearchSection } from "@/components/sections/AiResearchSection";
-import { ArchitectureSection } from "@/components/sections/ArchitectureSection";
-import { EnginesSection } from "@/components/sections/EnginesSection";
-import { FutureSection } from "@/components/sections/FutureSection";
+import { SiteFrame } from "@/components/layout/SiteFrame";
+import { HomeRest } from "@/components/home/HomeRest";
 import { HeroSection } from "@/components/sections/HeroSection";
-import { OpenScienceSection } from "@/components/sections/OpenScienceSection";
-import { ProblemSection } from "@/components/sections/ProblemSection";
-import { ResearchDomainsSection } from "@/components/sections/ResearchDomainsSection";
 import { RoadmapSection } from "@/components/sections/RoadmapSection";
-import { VisionSection } from "@/components/sections/VisionSection";
-import { VulsSection } from "@/components/sections/VulsSection";
 import { getContent } from "@/content";
+import { getV2 } from "@/content/v2";
 import type { Locale } from "@/content/types";
 import { organizationJsonLd } from "@/lib/seo";
 
 export function HomePage({ locale }: { locale: Locale }) {
   const content = getContent(locale);
+  const copy = getV2(locale);
 
   return (
-    <>
-      <a className="skip-link" href="#main">
-        {content.nav.skip}
-      </a>
-      <Navbar locale={locale} content={content} />
-      <main id="main">
-        <HeroSection locale={locale} content={content} />
-        <VisionSection content={content} />
-        <ProblemSection content={content} />
-        <EnginesSection content={content} />
-        <ArchitectureSection content={content} />
-        <VulsSection content={content} />
-        <ResearchDomainsSection content={content} />
-        <AiResearchSection content={content} />
-        <OpenScienceSection content={content} />
+    <SiteFrame locale={locale}>
+      <HeroSection locale={locale} content={content} />
+      <div className="theme-light">
+        <HomeRest locale={locale} />
         <RoadmapSection content={content} />
-        <FutureSection locale={locale} content={content} />
-      </main>
-      <Footer locale={locale} content={content} />
+        <p className="mx-auto max-w-[1240px] px-5 pb-16 text-sm leading-6 text-[var(--color-text-secondary)] md:px-[5vw]">{copy.roadmapNote}</p>
+      </div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd(locale)) }} />
-    </>
+    </SiteFrame>
   );
 }

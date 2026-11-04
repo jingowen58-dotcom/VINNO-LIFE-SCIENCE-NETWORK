@@ -11,8 +11,9 @@ export type SiteContent = {
   locale: Locale;
   meta: { title: string; description: string; ogLocale: string };
   nav: {
-    links: { id: string; label: string }[];
+    links: { id: string; label: string; path: string }[];
     health: string;
+    assess: string;
     contact: string;
     openMenu: string;
     closeMenu: string;

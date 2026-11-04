@@ -1,12 +1,13 @@
-export const statusIds = ["implemented", "in_progress", "planned", "vision"] as const;
+export const statusIds = ["implemented", "in_progress", "planned", "vision", "potential"] as const;
 
 export type StatusId = (typeof statusIds)[number];
 
 export const statusCatalog: Record<StatusId, { en: string; zh: string }> = {
   implemented: { en: "Implemented", zh: "已实现" },
-  in_progress: { en: "In Progress", zh: "进行中" },
-  planned: { en: "Planned", zh: "已规划" },
-  vision: { en: "Long-term Vision", zh: "长期愿景" },
+  in_progress: { en: "In progress", zh: "建设中" },
+  planned: { en: "In preparation", zh: "研究准备" },
+  vision: { en: "Future direction", zh: "未来规划" },
+  potential: { en: "Potential collaboration", zh: "潜在合作" },
 };
 
 export function aggregateStatus(ids: StatusId[]): StatusId {

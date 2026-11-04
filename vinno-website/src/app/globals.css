@@ -16,6 +16,21 @@
   --radius-card: 16px;
 }
 
+.theme-light {
+  --color-bg: #f4f0e6;
+  --color-bg-secondary: #ebe4d4;
+  --color-bg-card: #fffdf8;
+  --color-primary: #244b3a;
+  --color-secondary: #c6a66b;
+  --color-accent: #3d6b54;
+  --color-text-primary: #1c2b24;
+  --color-text-secondary: #3e5348;
+  --color-text-muted: #5e6f66;
+  --color-border: rgba(36, 75, 58, 0.16);
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+}
+
 * {
   box-sizing: border-box;
 }

@@ -16,13 +16,14 @@ const keywords = [
   "AI Research Engine",
 ];
 
-export function buildMetadata(locale: Locale, path = ""): Metadata {
+export function buildMetadata(locale: Locale, path = "", title?: string): Metadata {
   const content = getContent(locale);
   const localized = `${siteUrl}/${locale}${path}/`;
+  const pageTitle = title ?? content.meta.title;
 
   return {
     metadataBase: new URL(siteOrigin),
-    title: content.meta.title,
+    title: pageTitle,
     description: content.meta.description,
     keywords,
     alternates: {
@@ -33,7 +34,7 @@ export function buildMetadata(locale: Locale, path = ""): Metadata {
       },
     },
     openGraph: {
-      title: content.meta.title,
+      title: pageTitle,
       description: content.meta.description,
       url: localized,
       siteName: brand.name,
@@ -43,7 +44,7 @@ export function buildMetadata(locale: Locale, path = ""): Metadata {
     },
     twitter: {
       card: "summary_large_image",
-      title: content.meta.title,
+      title: pageTitle,
       description: content.meta.description,
       images: [`${siteUrl}/og.png`],
     },

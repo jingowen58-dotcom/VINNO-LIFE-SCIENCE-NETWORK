@@ -6,8 +6,6 @@ import type { SiteContent } from "@/content/types";
 import { Logo } from "@/components/ui/Logo";
 
 export function Footer({ locale, content }: { locale: "en" | "zh"; content: SiteContent }) {
-  const hrefFor = (id: string) => `/${locale}/#${id}`;
-
   return (
     <footer id="contact" className="border-t border-[var(--color-border)] bg-[var(--color-bg-secondary)]">
       <div className="mx-auto grid w-full max-w-[1440px] gap-12 px-5 py-16 md:px-[5vw] lg:grid-cols-[1.3fr_1fr_1fr]">
@@ -23,7 +21,7 @@ export function Footer({ locale, content }: { locale: "en" | "zh"; content: Site
                 const label = content.nav.links.find((link) => link.id === item.id)?.label ?? item.id;
                 return (
                   <li key={item.id}>
-                    <Link href={hrefFor(item.href)} className="text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]">
+                    <Link href={`/${locale}${item.path}/`} className="text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]">
                       {label}
                     </Link>
                   </li>
@@ -36,7 +34,7 @@ export function Footer({ locale, content }: { locale: "en" | "zh"; content: Site
             <ul className="mt-4 space-y-3">
               {engineOrder.map((id) => (
                 <li key={id}>
-                  <Link href={hrefFor(id === "network" ? "network" : id === "healthspan" ? "healthspan" : "health")} className="text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]">
+                  <Link href={id === "health" ? `/${locale}/health/` : id === "healthspan" ? `/${locale}/science/` : `/${locale}/products/`} className="text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]">
                     {content.footer.engines[id]}
                   </Link>
                 </li>

@@ -7,10 +7,10 @@ export const primaryNav = [
 ] as const;
 
 export const footerExplore = [
-  { id: "vision", href: "vision" },
-  { id: "architecture", href: "architecture" },
-  { id: "research", href: "research" },
-  { id: "roadmap", href: "roadmap" },
+  { id: "science", path: "/science" },
+  { id: "health", path: "/health" },
+  { id: "products", path: "/products" },
+  { id: "about", path: "/about" },
 ] as const;
 
 export const observedSections = [

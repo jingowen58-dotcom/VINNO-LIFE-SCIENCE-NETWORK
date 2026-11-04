@@ -7,6 +7,7 @@ const tones: Record<StatusId, string> = {
   in_progress: "border-[var(--color-primary)] text-[var(--color-primary)]",
   planned: "border-[var(--color-secondary)] text-[var(--color-secondary)]",
   vision: "border-[var(--color-text-secondary)] text-[var(--color-text-secondary)]",
+  potential: "border-[var(--color-secondary)] text-[var(--color-secondary)]",
 };
 
 export function StatusBadge({ status, locale }: { status: StatusId; locale: Locale }) {

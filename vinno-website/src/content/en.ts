@@ -10,13 +10,14 @@ export const en = {
   },
   nav: {
     links: [
-      { id: "vision", label: "Vision" },
-      { id: "engines", label: "Ecosystem" },
-      { id: "architecture", label: "Architecture" },
-      { id: "research", label: "Research" },
-      { id: "roadmap", label: "Roadmap" },
+      { id: "home", label: "Home", path: "" },
+      { id: "science", label: "Science", path: "/science" },
+      { id: "health", label: "Pet health", path: "/health" },
+      { id: "products", label: "Products", path: "/products" },
+      { id: "about", label: "About", path: "/about" },
     ],
-    health: "VINNO HEALTH",
+    health: "Pet health",
+    assess: "Start a health review",
     contact: "Contact",
     openMenu: "Open menu",
     closeMenu: "Close menu",
@@ -28,8 +29,8 @@ export const en = {
     title: "Building the Open Science Network for Life & Health.",
     subtitle:
       "Connecting biological data, research intelligence and scientific collaboration to advance our understanding of life and healthspan.",
-    primary: "Explore Our Vision",
-    secondary: "Discover Our Architecture",
+    primary: "Explore pet health",
+    secondary: "Explore the science",
     today:
       "What is public today is a draft data standard for domestic dogs and a reference validator. Research databases, the AI engine, and the collaboration network are not in service.",
     aside: "From Data to Discovery. From Life to Longevity.",
